@@ -19,20 +19,16 @@ io.on('connection', (socket) => {
     console.log('Received message:', message);
   });
 
-
-  
-  socket.on('mediaData', (data) => {
-    console.log('Data Sent from React: ', data);
-  });
-});
-
   socket.on('disconnect', () => {
     console.log('Client disconnected');
   });
 });
 
 
-
+socket.on('mediaData', (data) => {
+  console.log('Received media data:', data);
+  // Handle received media data here
+});
 
 
 server.listen(8080, () => {
