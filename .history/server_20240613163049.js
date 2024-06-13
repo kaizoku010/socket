@@ -30,11 +30,8 @@ io.on('connection', (socket) => {
     console.log('Received message:', message);
   });
 
-  setInterval(() => {
-    socket.emit('hello', 'Hello from server');
-  }, 5000);
 
-
+  
   socket.on('battery', (data) => {
     console.log('Device battery:', data);
   });
