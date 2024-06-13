@@ -42,7 +42,7 @@ io.on('connection', (socket) => {
     console.log('Received media data:', data);
     socket.emit('media', 'Media data received');
   });
-},2000);
+},)
 
   socket.on('disconnect', () => {
     console.log('Client disconnected');
