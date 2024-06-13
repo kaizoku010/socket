@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
   setInterval(() => {
     socket.emit('hello', 'Hello from server');
   }, 5000);
-
+c
 
 io.on('connection', (socket) => {
   console.log('Client connected');
