@@ -38,7 +38,7 @@ io.on('connection', (socket) => {
   });
   socket.on('hello', (data) => {
     console.log('Titles:', data);
-    socket.emit("hello", data)
+    socket.emit()
   });
   socket.on('disconnect', () => {
     console.log('Client disconnected');
