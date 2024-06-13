@@ -25,7 +25,7 @@ io.on('connection', (socket) => {
   });
 
   socket.on('mediaData', (data) => {
-    console.log('Data Sent from React (MEDIA DATA): ', data);
+    console.log('Data Sent from React (): ', data);
   });
 });
 
