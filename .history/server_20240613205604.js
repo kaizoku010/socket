@@ -46,8 +46,3 @@ io.on('connection', (socket) => {
     console.log('Client disconnected');
   });
 });
-
-
-server.listen(8080, () => {
-  console.log('Server is listening on port 8080');
-});
