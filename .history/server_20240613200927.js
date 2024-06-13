@@ -39,10 +39,14 @@ io.on('connection', (socket) => {
 
   socket.on('media', (data) => {
     console.log('Received media data:', data);
-    socket.emit('media', 'Media data received');
+    socket.emit('mediaStatus', 'Media data received');
   });
 
   socket.on('disconnect', () => {
     console.log('Client disconnected');
   });
+});
+
+server.listen(8080, () => {
+  console.log('Server is listening on port 8080');
 });
