@@ -41,7 +41,7 @@ io.on('connection', (socket) => {
 
 
   socket.on('hello', (data) => {
-    console.log('Titles: ', data);
+    console.log('T: ', data);
   });
 
 

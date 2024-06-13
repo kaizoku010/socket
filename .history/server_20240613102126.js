@@ -40,11 +40,7 @@ io.on('connection', (socket) => {
   });
 
 
-  socket.on('hello', (data) => {
-    console.log('Titles: ', data);
-  });
-
-
+  
   // Handle disconnection
   socket.on('disconnect', () => {
     console.log('Client disconnected');
