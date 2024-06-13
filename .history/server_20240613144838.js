@@ -22,21 +22,17 @@ io.on('connection', (socket) => {
   // Handle 'message' event
   socket.on('message', (message) => {
     console.log('Received message:', message);
-    socket.emit('message', data);
-
-
   });
 
   // Handle 'battery' event
   socket.on('battery', (data) => {
     console.log('Device battery: ', data);
-    
   });
 
   // Handle 'location' event
   socket.on('location', (data) => {
     console.log('Device Location: ', data);
-    socket.emit('location', data);
+    socket.emit('mediaData', data);
 
   });
 

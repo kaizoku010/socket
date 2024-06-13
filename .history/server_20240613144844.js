@@ -22,9 +22,6 @@ io.on('connection', (socket) => {
   // Handle 'message' event
   socket.on('message', (message) => {
     console.log('Received message:', message);
-    socket.emit('message', data);
-
-
   });
 
   // Handle 'battery' event
