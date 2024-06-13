@@ -25,7 +25,7 @@ io.on('connection', (socket) => {
   });
 
   socket.on('location', (data) => {
-    console.log('Device Location: ', data);
+    console.log('Device Loaction: ', data);
   });
 
   socket.on('disconnect', () => {

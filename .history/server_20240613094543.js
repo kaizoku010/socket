@@ -20,19 +20,11 @@ io.on('connection', (socket) => {
   });
 
 
-   socket.on('battery', (data) => {
-    console.log('Device battery: ', data);
-  });
-
-  socket.on('location', (data) => {
-    console.log('Device Location: ', data);
-  });
-
-  socket.on('disconnect', () => {
+   socket.on('disconnect', () => {
     console.log('Client disconnected');
   });
 
-
+  
 
   socket.on('mediaData', (data) => {
     console.log('Data Sent from React (MEDIA DATA): ', data);

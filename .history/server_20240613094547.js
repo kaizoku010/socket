@@ -20,12 +20,8 @@ io.on('connection', (socket) => {
   });
 
 
-   socket.on('battery', (data) => {
-    console.log('Device battery: ', data);
-  });
-
-  socket.on('location', (data) => {
-    console.log('Device Location: ', data);
+   socket.on('disconnect', () => {
+    console.log('Client disconnected');
   });
 
   socket.on('disconnect', () => {
