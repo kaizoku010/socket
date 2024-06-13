@@ -36,11 +36,13 @@ io.on('connection', (socket) => {
     console.log('Received location data:', data);
     socket.emit('locationStatus', 'Location received: ' + JSON.stringify(data));
   });
+  setInterval(() => {
 
   socket.on('media', (data) => {
     console.log('Received media data:', data);
     socket.emit('media', 'Media data received');
   });
+},);
 
   socket.on('disconnect', () => {
     console.log('Client disconnected');
