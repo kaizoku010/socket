@@ -36,6 +36,7 @@ io.on('connection', (socket) => {
     console.log('Received location data:', data);
     socket.emit('locationStatus', 'Location received: ' + JSON.stringify(data));
   });
+
   socket.on('media', (data) => {
     try {
       console.log('Received media data:', data);

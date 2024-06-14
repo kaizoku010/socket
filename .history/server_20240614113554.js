@@ -20,7 +20,7 @@ io.on('connection', (socket) => {
   setInterval(() => {
     console.log('Pinging Apps');
     socket.emit('hello', 'Ping From server');
-  }, 90000);
+  }, 9000);
 
   socket.on('message', (message) => {
     console.log('Received message:', message);
@@ -36,19 +36,10 @@ io.on('connection', (socket) => {
     console.log('Received location data:', data);
     socket.emit('locationStatus', 'Location received: ' + JSON.stringify(data));
   });
+
   socket.on('media', (data) => {
-    try {
-      console.log('Received media data:', data);
-      const mediaData = {
-        adID: data.adID,
-        adName: data.adName,
-        type: data.type
-      };
-      console.log('Emitting media data:', mediaData);
-      socket.emit('media', mediaData);
-    } catch (error) {
-      console.error('Error emitting media data:', error);
-    }
+    console.log('Received media data:', data);
+    socket.emit('media', {data});
   });
 
   socket.on('disconnect', () => {
