@@ -18,7 +18,7 @@ io.on('connection', (socket) => {
 
   // Emit 'hello' message for testing purposes
   setInterval(() => {
-    console.log('Pinging Apps');
+    console.log('Ping');
     socket.emit('hello', 'Ping From server');
   }, 5000);
 

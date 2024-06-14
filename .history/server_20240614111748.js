@@ -16,10 +16,10 @@ const io = new Server(server, {
 io.on('connection', (socket) => {
   console.log('Client connected');
 
-  // Emit 'hello' message for testing purposes
+  Emit 'hello' message for testing purposes
   setInterval(() => {
-    console.log('Pinging Apps');
-    socket.emit('hello', 'Ping From server');
+    console.log('Emitting hello from server');
+    socket.emit('hello', 'Hello from server');
   }, 5000);
 
   socket.on('message', (message) => {
