@@ -20,7 +20,7 @@ io.on('connection', (socket) => {
   setInterval(() => {
     console.log('Pinging Apps');
     socket.emit('hello', 'Ping From server');
-  }, 5000);
+  }, 000);
 
   socket.on('message', (message) => {
     console.log('Received message:', message);
